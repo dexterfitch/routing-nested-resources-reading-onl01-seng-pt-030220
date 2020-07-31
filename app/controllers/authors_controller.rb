@@ -6,6 +6,8 @@ class AuthorsController < ApplicationController
 
   def posts_index
     @author = get_author_by_id
+    @posts = @author.posts
+    render template: 'posts/index'
   end
 
   def posts
