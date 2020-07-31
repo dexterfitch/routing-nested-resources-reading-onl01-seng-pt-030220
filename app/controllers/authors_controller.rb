@@ -5,9 +5,11 @@ class AuthorsController < ApplicationController
   end
 
   def posts_index
+    @author = get_author_by_id
   end
 
   def posts
+    @author = get_author_by_id
   end
 
 private
